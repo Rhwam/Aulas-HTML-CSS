@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+
+    <style>
+        /* Especifidade: 0.0.0.1 */
+        p {
+            color: red;
+        }
+
+        /* Especifidade: 0.0.1.1 */
+        .novacor {
+            color: cornflowerblue;
+        }
+
+        /* Especifidade: 0.1.1.1 */
+        #newcolor2,
+        #newcolor {
+            color: darkgray;
+        }
+
+        /* Especifidade: 1.1.1.1 */
+    </style>
+</head>
+
+<body>
+    <p>Texto 1</p>
+    <p class="novacor">Texto 2</p>
+    <p class="novacor">Texto 3</p>
+    <p id="newcolor" class="novacor">Texto 4</p>
+    <!-- Especifidade: 1.1.1.1 -->
+    <p id="newcolor2" class="novacor" style="color: darkseagreen;">Texto 5</p>
+    <!---->
+    <p>Texto 6</p>
+</body>
+
+</html>
